@@ -29,6 +29,13 @@ module.exports = (httpsServer) => {
         }
       }
     });
+    socket.on("update_game", (message) => {
+      const socketRooms = Array.from(socket.rooms.values()).filter(
+        (r) => r !== socket.id
+      );
+      const gameRoom = socketRooms && socketRooms[0];
+      socket.to(gameRoom).emit("on_game_update", message);
+    });
   });
 
   return io;

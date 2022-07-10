@@ -80,6 +80,7 @@ const GameSpace = (props) => {
                   onClick={() => {
                     const value = props.DiceRoll();
                     props.setDiceValue(value);
+                    props.UpdateBoard(value);
                   }}
                   className="btn btn-info text-white mt-2"
                 >
