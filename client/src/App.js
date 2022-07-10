@@ -3,9 +3,6 @@ import Room from "./Room/Room";
 import GameSpace from "./GameSpace/GameSpace";
 import {
   BoardCell,
-  LadderAndSnakes,
-  ExtraMove,
-  NonExtraMove,
 } from "./shared/data";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
